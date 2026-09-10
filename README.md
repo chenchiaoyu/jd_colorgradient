@@ -6,7 +6,7 @@
 
 ## 🌐 線上 Demo 預覽
 
-* **[點擊此處立即體驗線上網頁工具](https://chenchiaoyu.github.io/jd_prompt/)**
+* **[點擊此處立即體驗線上網頁工具](https://chenchiaoyu.github.io/jd_colorgradient/)**
 
 ---
 
@@ -23,11 +23,3 @@
 * **字體大小調整**：提供 **小、標準、中、大、特大、巨大** 六段式字級快捷切換。
 * **文字色彩基準**：提供「品牌主色與灰階」（Gray 900、Gray 700、Rose 系列）與「輔助色 Deep」（紫羅蘭、天空、湖水、青苔、草木、大地等）共多種專業色彩對比選項。
 
-### 3. AI 影像提示詞生成 (AI Image Prompt Generator)
-* 根據高質感極簡攝影與禪意美學，一鍵生成精準的中英文提示詞（Prompt），支援直接複製並貼至 Midjourney、DALL-E 或 Gemini 進行高水準的品牌視覺創作。
-
----
-
-## 🛠️ 開發與部署 (Development & Deployment)
-
-本專案支援現代前端工具鏈（Vite + React + TypeScript + Tailwind CSS），並已完整設定 GitHub Actions 自動化部署，每次更新推送到主分支時將自動發布至 GitHub Pages。
