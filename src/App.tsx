@@ -608,14 +608,15 @@ export default function App() {
                   </p>
                 </div>
 
-                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity z-20">
                   <button
                     type="button"
                     onClick={() => handleCopy(gradientCSS)}
-                    className="px-5 py-3 rounded-full bg-white/95 hover:bg-white text-stone-900 font-bold text-sm shadow-lg backdrop-blur-md transition-all active:scale-95 cursor-pointer flex items-center gap-2"
+                    className="px-3.5 py-2 rounded-xl bg-white/90 hover:bg-white text-stone-900 font-bold text-xs shadow-md backdrop-blur-md transition-all active:scale-95 cursor-pointer flex items-center gap-1.5 border border-stone-200/50"
+                    title="快速複製 CSS 語法"
                   >
-                    <Copy className="w-4 h-4 text-rose-500" />
-                    <span>快速複製 CSS 語法</span>
+                    <Copy className="w-3.5 h-3.5 text-rose-500" />
+                    <span>複製 CSS</span>
                   </button>
                 </div>
               </div>
