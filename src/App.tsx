@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { BookOpen, Copy, Check, Sparkles, RefreshCw, Layers, AlertCircle, Info } from 'lucide-react';
+import { BookOpen, Copy, Check, Sparkles, RefreshCw, Layers, AlertCircle, Info, ExternalLink } from 'lucide-react';
 import { GradientState, Palette, Shade } from './types';
 import { PALETTES, STORAGE_KEY } from './data';
 import { generateGradientCSS, getColorHex, cn } from './utils';
@@ -194,6 +194,15 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-2.5 flex-wrap">
+            <a
+              href="https://chenchiaoyu.github.io/jd_prompt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-[13px] font-semibold bg-white text-stone-700 hover:bg-stone-50 border border-stone-200/80 shadow-xs transition-all active:scale-95 cursor-pointer"
+            >
+              <ExternalLink className="w-4 h-4 text-rose-500" />
+              <span>品牌提示詞工具</span>
+            </a>
             <button
               type="button"
               onClick={handleRandomize}
