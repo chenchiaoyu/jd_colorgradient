@@ -169,18 +169,28 @@ export default function App() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-8 md:pt-12">
         
         {/* Header */}
-        <header className="mb-6 md:mb-10 pb-5 md:pb-6 border-b border-stone-200 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <img 
-              src="/logo_final-03.svg" 
-              alt="Logo" 
-              className="w-10 h-10 object-contain drop-shadow-xs" 
-            />
-            <div>
-              <h1 className="text-[clamp(22px,3vw,32px)] font-bold tracking-tight leading-tight" style={{ color: '#FF7A7B' }}>
-                悅心靈・品牌漸層生成器
-              </h1>
-            </div>
+        <header className="mb-6 md:mb-10 pb-5 md:pb-6 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3.5 flex-wrap">
+            <a 
+              href="https://github.com/chenchiaoyu/jd_colorgradient/blob/main/public/logo_final-02.png" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center hover:opacity-90 transition-opacity"
+              title="查看 LOGOTYPE 原始圖檔"
+            >
+              <div className="relative inline-block w-[220px] sm:w-[290px] h-14 sm:h-18 overflow-hidden flex items-center">
+                <img 
+                  src="https://raw.githubusercontent.com/chenchiaoyu/jd_colorgradient/main/public/logo_final-02.png" 
+                  alt="JOYFUL DIVINE 悅心靈" 
+                  className="w-full h-full object-contain object-left"
+                  style={{ filter: 'brightness(0) saturate(100%) invert(64%) sepia(35%) saturate(1450%) hue-rotate(313deg) brightness(101%) contrast(102%)' }}
+                />
+              </div>
+            </a>
+            <div className="hidden sm:block h-7 w-[1px] bg-stone-300"></div>
+            <span className="text-stone-600 font-medium text-sm md:text-base tracking-wide">
+              品牌漸層色搭配參考
+            </span>
           </div>
 
           <div className="flex items-center gap-2.5 flex-wrap">
