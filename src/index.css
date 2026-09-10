@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Serif TC', serif;
+  }
+}
+
+.font-serif-tc {
+  font-family: 'Noto Serif TC', serif;
+}
+
+.font-sans-tc {
+  font-family: 'Noto Sans TC', sans-serif;
+}

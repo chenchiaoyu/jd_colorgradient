@@ -1,11 +1,15 @@
-<div align="center">
+# 悅心靈 - 品牌影像生成提示詞工具
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+針對品牌「悅心靈」量身打造的引導式影像風格與提示詞生成工具，幫助您快速構建高質感、風格統一的品牌視覺提示詞。
 
-  <h1>Built with AI Studio</h2>
+## 🌐 線上 Demo 預覽
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+* **[點擊此處立即體驗線上網頁工具](https://chenchiaoyu.github.io/jd_prompt/)**
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+---
 
-</div>
+## ✨ 功能特色
+
+- **引導式參數選擇**：輕鬆挑選構圖、風格、色調與情感氛圍。
+- **即時提示詞預覽**：一鍵生成中英文高精度 AI 影像生成提示詞。
+- **一鍵複製與匯出**：方便直接貼至 Midjourney、DALL-E 或 Gemini 進行影像創作。
