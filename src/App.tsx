@@ -172,7 +172,7 @@ export default function App() {
         <header className="mb-6 md:mb-10 pb-5 md:pb-6 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5 flex-wrap">
             <a 
-              href="https://github.com/chenchiaoyu/jd_colorgradient/blob/main/public/logo_final-02.png" 
+              href="https://github.com/chenchiaoyu/jd_colorgradient/blob/main/public/logo_final_Logotype01_R.svg" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center hover:opacity-90 transition-opacity"
@@ -180,7 +180,7 @@ export default function App() {
             >
               <div className="relative inline-block w-[220px] sm:w-[290px] h-14 sm:h-18 overflow-hidden flex items-center">
                 <img 
-                  src="https://raw.githubusercontent.com/chenchiaoyu/jd_colorgradient/main/public/logo_final-02.png" 
+                  src="https://raw.githubusercontent.com/chenchiaoyu/jd_colorgradient/386fd11282de93cb53cca877a3ff4ac11d009525/public/logo_final_Logotype01_R.svg" 
                   alt="JOYFUL DIVINE 悅心靈" 
                   className="w-full h-full object-contain object-left"
                   style={{ filter: 'brightness(0) saturate(100%) invert(64%) sepia(35%) saturate(1450%) hue-rotate(313deg) brightness(101%) contrast(102%)' }}
