@@ -36,7 +36,7 @@ function getSecondLayerShades(palette: Palette): Shade[] {
 
 const DEFAULT_STATE: GradientState = {
   projectName: "品牌漸層專用",
-  previewText: "悅心靈・找到屬於你的平靜與美好",
+  previewText: "悅心靈・用光指引生命的方向",
   textColorMode: "gray900",
   color1Group: "rose",
   color1Shade: "tint",
