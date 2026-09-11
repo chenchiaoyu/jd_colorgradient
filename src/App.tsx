@@ -54,7 +54,11 @@ export default function App() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
-        return { ...DEFAULT_STATE, ...JSON.parse(saved) };
+        const parsed = JSON.parse(saved);
+        if (!parsed.previewText || parsed.previewText === "悅心靈・找到屬於你的平靜與美好") {
+          parsed.previewText = "悅心靈・用光指引生命的方向";
+        }
+        return { ...DEFAULT_STATE, ...parsed };
       }
     } catch (e) {
       // Ignore
