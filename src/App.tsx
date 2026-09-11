@@ -253,7 +253,15 @@ export default function App() {
                     i
                   </button>
                 </h2>
-                <span className="font-mono text-[12px] text-stone-400">{c1Hex}</span>
+                <button
+                  type="button"
+                  onClick={() => handleCopy(c1Hex)}
+                  className="font-mono text-[12px] text-stone-500 hover:text-[#FF7A7B] bg-stone-100 hover:bg-rose-50 px-2.5 py-1 rounded-lg transition-all cursor-pointer flex items-center gap-1.5"
+                  title="點擊複製色碼"
+                >
+                  <span>{c1Hex}</span>
+                  <Copy className="w-3 h-3 text-stone-400" />
+                </button>
               </div>
               {openInfos['layer1_heading'] && (
                 <p className="mb-4 text-xs text-rose-800 bg-rose-50/90 border border-rose-100 p-2.5 rounded-xl leading-relaxed animate-in fade-in duration-200">
@@ -371,7 +379,15 @@ export default function App() {
                     i
                   </button>
                 </h2>
-                <span className="font-mono text-[12px] text-stone-400">{c2Hex}</span>
+                <button
+                  type="button"
+                  onClick={() => handleCopy(c2Hex)}
+                  className="font-mono text-[12px] text-stone-500 hover:text-[#FF7A7B] bg-stone-100 hover:bg-rose-50 px-2.5 py-1 rounded-lg transition-all cursor-pointer flex items-center gap-1.5"
+                  title="點擊複製色碼"
+                >
+                  <span>{c2Hex}</span>
+                  <Copy className="w-3 h-3 text-stone-400" />
+                </button>
               </div>
               {openInfos['layer2_heading'] && (
                 <p className="mb-4 text-xs text-rose-800 bg-rose-50/90 border border-rose-100 p-2.5 rounded-xl leading-relaxed animate-in fade-in duration-200">
@@ -688,38 +704,72 @@ export default function App() {
                 <div className="space-y-3">
                   <label className="block text-[11px] font-bold text-stone-400 uppercase tracking-wider mb-1">文字色彩基準</label>
                   
-                  {/* Category 1: 品牌主色與灰階 (Moved to top) */}
-                  <div>
-                    <span className="text-[11px] font-bold text-stone-500 mb-1.5 block">品牌主色與灰階</span>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 sm:grid-flow-col sm:auto-cols-fr gap-2">
-                      {[
-                        { key: 'gray900', label: 'Gray 900', hex: '#2A2430' },
-                        { key: 'gray700', label: 'Gray 700', hex: '#544A52' },
-                        { key: 'rose700', label: 'Rose 700', hex: '#be123c' },
-                        { key: 'rose800', label: 'Rose 800', hex: '#9f1239' },
-                        { key: 'rose900', label: 'Rose 900', hex: '#881337' }
-                      ].map(mode => (
-                        <button
-                          key={mode.key}
-                          type="button"
-                          onClick={() => updateState({ textColorMode: mode.key as any })}
-                          className={cn(
-                            "py-2 px-2.5 rounded-xl text-xs font-semibold border text-left transition-all cursor-pointer flex items-center gap-2",
-                            state.textColorMode === mode.key 
-                              ? "bg-stone-900 text-white border-stone-900 shadow-sm" 
-                              : "bg-stone-50 hover:bg-stone-100 text-stone-700 border-stone-200/80"
-                          )}
-                        >
-                          <span className="w-3.5 h-3.5 rounded-full shrink-0 border border-black/10 shadow-2xs" style={{ backgroundColor: mode.hex }} />
-                          <span className="truncate">{mode.label}</span>
-                        </button>
-                      ))}
+                    {/* Category 1: 品牌主色與灰階 */}
+                  <div className="p-3.5 rounded-2xl bg-stone-50/80 border border-stone-200/60 shadow-2xs space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[12px] font-extrabold text-stone-800 tracking-wide flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-stone-500"></span>
+                        品牌主色與灰階
+                      </span>
+                    </div>
+
+                    {/* Row 1: 灰階 */}
+                    <div>
+                      <span className="text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1 block">灰階色系</span>
+                      <div className="grid grid-cols-2 gap-2">
+                        {[
+                          { key: 'gray900', label: 'Gray 900', hex: '#2A2430' },
+                          { key: 'gray700', label: 'Gray 700', hex: '#544A52' }
+                        ].map(mode => (
+                          <button
+                            key={mode.key}
+                            type="button"
+                            onClick={() => updateState({ textColorMode: mode.key as any })}
+                            className={cn(
+                              "py-2 px-2.5 rounded-xl text-xs font-semibold border text-left transition-all cursor-pointer flex items-center gap-2",
+                              state.textColorMode === mode.key 
+                                ? "bg-stone-900 text-white border-stone-900 shadow-sm" 
+                                : "bg-white hover:bg-stone-50 text-stone-700 border-stone-200/80"
+                            )}
+                          >
+                            <span className="w-3.5 h-3.5 rounded-full shrink-0 border border-black/10 shadow-2xs" style={{ backgroundColor: mode.hex }} />
+                            <span className="truncate">{mode.label}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Row 2: 品牌主色 */}
+                    <div>
+                      <span className="text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1 block">品牌主色系</span>
+                      <div className="grid grid-cols-3 gap-2">
+                        {[
+                          { key: 'rose700', label: 'Rose 700', hex: '#be123c' },
+                          { key: 'rose800', label: 'Rose 800', hex: '#9f1239' },
+                          { key: 'rose900', label: 'Rose 900', hex: '#881337' }
+                        ].map(mode => (
+                          <button
+                            key={mode.key}
+                            type="button"
+                            onClick={() => updateState({ textColorMode: mode.key as any })}
+                            className={cn(
+                              "py-2 px-2.5 rounded-xl text-xs font-semibold border text-left transition-all cursor-pointer flex items-center gap-2",
+                              state.textColorMode === mode.key 
+                                ? "bg-stone-900 text-white border-stone-900 shadow-sm" 
+                                : "bg-white hover:bg-stone-50 text-stone-700 border-stone-200/80"
+                            )}
+                          >
+                            <span className="w-3.5 h-3.5 rounded-full shrink-0 border border-black/10 shadow-2xs" style={{ backgroundColor: mode.hex }} />
+                            <span className="truncate">{mode.label}</span>
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
                   {/* Category 2: 輔助色 Deep */}
-                  <div>
-                    <span className="text-[11px] font-bold text-stone-500 mb-1.5 block">輔助色 Deep</span>
+                  <div className="p-3.5 rounded-2xl bg-stone-50/70 border border-stone-200/60">
+                    <span className="text-[12px] font-bold text-stone-600 mb-2 block">輔助色 Deep</span>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                       {[
                         { key: 'violet_deep', label: '紫羅蘭', hex: '#9439A2' },
@@ -768,50 +818,7 @@ export default function App() {
               </div>
             </section>
 
-            {/* Code Output Section */}
-            <section className="bg-white border border-stone-200/80 rounded-3xl p-5 md:p-7 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.05)]">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2 bg-stone-100 p-1 rounded-xl">
-                  <button
-                    type="button"
-                    onClick={() => setCodeTab('css')}
-                    className={cn(
-                      "px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer",
-                      codeTab === 'css' ? "bg-white text-stone-900 shadow-xs" : "text-stone-500"
-                    )}
-                  >
-                    CSS
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setCodeTab('tailwind')}
-                    className={cn(
-                      "px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer",
-                      codeTab === 'tailwind' ? "bg-white text-stone-900 shadow-xs" : "text-stone-500"
-                    )}
-                  >
-                    Tailwind
-                  </button>
-                </div>
 
-                <button
-                  type="button"
-                  onClick={() => handleCopy(codeTab === 'css' ? `background: ${gradientCSS};` : `bg-[${gradientCSS}]`)}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-[#FF7A7B] text-white hover:bg-[#FF6566] transition-all shadow-sm active:scale-95 cursor-pointer"
-                >
-                  <Copy className="w-3.5 h-3.5" />
-                  <span>複製程式碼</span>
-                </button>
-              </div>
-
-              <div className="bg-stone-900 text-stone-200 p-4 rounded-2xl font-mono text-xs overflow-x-auto shadow-inner">
-                {codeTab === 'css' ? (
-                  <code>background: {gradientCSS};</code>
-                ) : (
-                  <code>/* 推薦使用內聯樣式應用動態漸層 */<br/>style=&#123;&#123; background: "{gradientCSS}" &#125;&#125;</code>
-                )}
-              </div>
-            </section>
 
           </div>
 
