@@ -22,7 +22,7 @@ export const PALETTES: Palette[] = [
     phrase: "the scene rendered in tranquil violet, soft amethyst and lavender tones, quiet and spiritual",
     mood: "a peaceful, spiritual atmosphere, poetic and deeply calming",
     shades: [
-      { key: "tint", label: "Tint", hex: "#F5EDF6", depthLabel: "a very pale violet tint" },
+      { key: "tint", label: "Tint", hex: "#F7EEF7", depthLabel: "a very pale violet tint" },
       { key: "soft", label: "Soft", hex: "#EAD7EA", depthLabel: "a soft lavender shade" }
     ],
     items: [
@@ -35,7 +35,7 @@ export const PALETTES: Palette[] = [
     phrase: "the scene rendered in vast open sky blue, clear azure and airy daylight tones",
     mood: "an open, liberating atmosphere, clear-sighted and expansive",
     shades: [
-      { key: "tint", label: "Tint", hex: "#EDF0F6", depthLabel: "a pale airy azure tint" },
+      { key: "tint", label: "Tint", hex: "#EDF1F7", depthLabel: "a pale airy azure tint" },
       { key: "soft", label: "Soft", hex: "#D7DEEA", depthLabel: "a soft light sky blue" }
     ],
     items: [
@@ -61,7 +61,7 @@ export const PALETTES: Palette[] = [
     phrase: "the scene rendered in quiet mossy green, soft sage and deep forest green tones",
     mood: "a hushed, introspective atmosphere, settled and restrained",
     shades: [
-      { key: "tint", label: "Tint", hex: "#ECF5F2", depthLabel: "a pale sage tint" },
+      { key: "tint", label: "Tint", hex: "#ECF6F5", depthLabel: "a pale sage tint" },
       { key: "soft", label: "Soft", hex: "#D4EAE6", depthLabel: "a soft muted sage green" }
     ],
     items: [
@@ -74,7 +74,7 @@ export const PALETTES: Palette[] = [
     phrase: "the scene rendered in fresh botanical green, tender herbal leaves and gentle sunlight hues",
     mood: "a vibrant yet gentle atmosphere, rejuvenating and naturally alive",
     shades: [
-      { key: "tint", label: "Tint", hex: "#F0F5EC", depthLabel: "a pale tender sprout tint" },
+      { key: "tint", label: "Tint", hex: "#EFF6ED", depthLabel: "a pale tender sprout tint" },
       { key: "soft", label: "Soft", hex: "#D9EAD6", depthLabel: "a soft meadow green shade" }
     ],
     items: [
@@ -87,7 +87,7 @@ export const PALETTES: Palette[] = [
     phrase: "the scene rendered in grounded ochre, warm amber and terracotta clay tones",
     mood: "a grounded, abundant atmosphere, ritualistic and steady",
     shades: [
-      { key: "tint", label: "Tint", hex: "#F8F0E2", depthLabel: "a pale terracotta tint" },
+      { key: "tint", label: "Tint", hex: "#FCF7F0", depthLabel: "a pale terracotta tint" },
       { key: "soft", label: "Soft", hex: "#F1E0C2", depthLabel: "a soft muted amber shade" }
     ],
     items: [

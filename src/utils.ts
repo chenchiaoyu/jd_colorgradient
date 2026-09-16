@@ -20,7 +20,7 @@ export function generateGradientCSS(state: GradientState): string {
   if (state.gradientType === 'linear') {
     return `linear-gradient(${state.angle}deg, ${c1}, ${c2})`;
   } else if (state.gradientType === 'radial') {
-    return `radial-gradient(circle, ${c1}, ${c2})`;
+    return `radial-gradient(circle at 50% ${state.radialPercent}%, ${c1}, ${c2})`;
   } else {
     return `conic-gradient(from ${state.angle}deg at 50% 50%, ${c1}, ${c2}, ${c1})`;
   }
