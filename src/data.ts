@@ -6,11 +6,13 @@ export const PALETTES: Palette[] = [
     name: "品牌主色", 
     sub: "破曉之光・理念與形象", 
     hex: "#FF7A7B",
-    phrase: "the scene rendered in warm signature brand tones of dawn coral-rose and soft blush, warm and gentle",
+    phrase: "the scene rendered in warm signature dawn coral-rose and soft blush light, warm and gentle",
     mood: "a warm, hopeful atmosphere, gentle and unhurried, reflecting brand ideals and core identity",
     shades: [
       { key: "tint", label: "Rose 50", hex: "#FFEAE7", depthLabel: "a pale blush tint" },
-      { key: "soft", label: "Rose 100", hex: "#FFE1DE", depthLabel: "a soft blush shade" }
+      { key: "soft", label: "Rose 100", hex: "#FFE1DE", depthLabel: "a soft blush shade" },
+      { key: "soft200", label: "Rose 200", hex: "#FFCDCB", depthLabel: "a light rose shade" },
+      { key: "soft300", label: "Rose 300", hex: "#FFB5B3", depthLabel: "a soft medium rose shade" }
     ],
     items: [
       "晨曦雲彩 dawn-lit clouds", "蓮花 lotus flower", "玫瑰花瓣 rose petals", "貝殼內壁 seashell interior",
@@ -19,7 +21,7 @@ export const PALETTES: Palette[] = [
   },
   {
     key: "violet", name: "紫羅蘭", sub: "VIOLET", hex: "#C78AC8",
-    phrase: "the scene rendered in tranquil violet, soft amethyst and lavender tones, quiet and spiritual",
+    phrase: "the scene rendered in tranquil violet, soft amethyst and lavender hues, quiet and spiritual",
     mood: "a peaceful, spiritual atmosphere, poetic and deeply calming",
     shades: [
       { key: "tint", label: "Tint", hex: "#F7EEF7", depthLabel: "a very pale violet tint" },
@@ -32,7 +34,7 @@ export const PALETTES: Palette[] = [
   },
   {
     key: "sky", name: "天空", sub: "SKY", hex: "#88A0C7",
-    phrase: "the scene rendered in vast open sky blue, clear azure and airy daylight tones",
+    phrase: "the scene rendered in vast open sky blue, clear azure and airy daylight hues",
     mood: "an open, liberating atmosphere, clear-sighted and expansive",
     shades: [
       { key: "tint", label: "Tint", hex: "#EDF1F7", depthLabel: "a pale airy azure tint" },
@@ -45,7 +47,7 @@ export const PALETTES: Palette[] = [
   },
   {
     key: "lake", name: "湖水", sub: "LAKE", hex: "#82B6C6",
-    phrase: "the scene rendered in still lake teal, soft aqua and muted cyan tones",
+    phrase: "the scene rendered in still lake teal, soft aqua and muted cyan hues",
     mood: "a still, precise atmosphere, clear-minded and composed",
     shades: [
       { key: "tint", label: "Tint", hex: "#EDF4F6", depthLabel: "a pale aqua tint" },
@@ -58,7 +60,7 @@ export const PALETTES: Palette[] = [
   },
   {
     key: "moss", name: "青苔", sub: "MOSS", hex: "#78B4AA",
-    phrase: "the scene rendered in quiet mossy green, soft sage and deep forest green tones",
+    phrase: "the scene rendered in quiet mossy green, soft sage and deep forest green hues",
     mood: "a hushed, introspective atmosphere, settled and restrained",
     shades: [
       { key: "tint", label: "Tint", hex: "#ECF6F5", depthLabel: "a pale sage tint" },
@@ -84,7 +86,7 @@ export const PALETTES: Palette[] = [
   },
   {
     key: "earth", name: "大地", sub: "EARTH", hex: "#DCB163",
-    phrase: "the scene rendered in grounded ochre, warm amber and terracotta clay tones",
+    phrase: "the scene rendered in warm amber, golden brown and muted sandstone color tones",
     mood: "a grounded, abundant atmosphere, ritualistic and steady",
     shades: [
       { key: "tint", label: "Tint", hex: "#FCF7F0", depthLabel: "a pale terracotta tint" },
@@ -94,19 +96,6 @@ export const PALETTES: Palette[] = [
       "岩石紋理 rock texture", "沙丘曲線 dune curve", "木紋肌理 wood grain texture", "素燒陶器 fired ceramic vessel",
       "金色麥穗 golden wheat ear", "黃昏微光 dusk twilight", "秋季芒草 silvergrass meadow", "暖色砂岩 warm sandstone"
     ]
-  },
-  {
-    key: "warmgray",
-    name: "暖灰",
-    sub: "WARM GRAY",
-    hex: "#F6F1ED",
-    phrase: "the scene rendered in gentle warm gray and subtle neutral tones",
-    mood: "a calm, grounding and warm neutral atmosphere",
-    shades: [
-      { key: "tint", label: "Gray 50", hex: "#FDF9F6", depthLabel: "a very pale warm gray tint" },
-      { key: "soft", label: "Gray 100", hex: "#F6F1ED", depthLabel: "a soft warm gray shade" }
-    ],
-    items: []
   }
 ];
 
